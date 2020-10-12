@@ -22,5 +22,6 @@ urlpatterns = [
     path('', restapiview.home, name='home'),
     path('hello/responsewithhtml', restapiview.responsewithhtml, name='responsewithhtml'),
     path('hello/form/', restapiview.form, name='helloform'),
+    path('hello/template/', restapiview.template, name='template'),
     # path('restapi/task/string', restapiview.taskstring, name='restapi_task_string'),
 ]

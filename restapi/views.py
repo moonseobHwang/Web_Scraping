@@ -20,3 +20,6 @@ def responsewithhtml(request):
 
 def form(request):
     return render(request,'hello/requestsform.html')
+
+def template(request):
+    return render(request,'hello/template.html')
