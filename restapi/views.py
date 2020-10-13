@@ -5,7 +5,7 @@ import requests
 # Create your views here.
 
 def home(request):
-    return HttpResponse("Hello, Django")
+    return render(request,'hello.html')
 
 def taskstring(request):
     result = "Rest API string!"

@@ -1,0 +1,6 @@
+<table class="table table-striped">
+    <tr> <th>title</th> <th>links</th> <th>create_dates</th> </tr>
+    {% for row in page_obj.0 %}
+    <tr> <td>{{row.title}}</td> <td>{{row.link}}</td> <td>{{row.create_date}}</td>  </tr>
+    {% endfor %}
+</table>
