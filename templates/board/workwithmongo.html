@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>취업사이트</title>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div class="w3-panel w3-animate-opacity">
+<div class="w3-tag w3-jumbo">취</div>
+<div class="w3-tag w3-jumbo">업</div>
+<div class="w3-tag w3-jumbo">정</div>
+<div class="w3-tag w3-jumbo">보</div>
+</div>
+
+<table class="table table-striped">
+    <tr>
+        <th class="w3-container w3-green">등록일</th> 
+        <th class="w3-container w3-blue">공고</th> 
+        <th class="w3-container w3-red">회사명</th> 
+        <th class="w3-container w3-yellow">연봉(만원)</th>
+        <th class="w3-container w3-green">기업만족도(n/5)</th> 
+        <th class="w3-container w3-pink">면접난이도</th> 
+        <th class="w3-container w3-blue">근무조건</th> 
+        <th class="w3-container w3-blue">근무일수</th> </tr>
+    {% for row in page_obj2.0 %}
+    <tr> 
+        <td>{{row.C_deadline}}</td> 
+        <td>{{row.info}}</td> 
+        <td>{{row.C_name}}</td> 
+        <td>{{row.price}}</td> 
+        <td>{{row.contentment}}</td> 
+        <td>{{row.difficulty}}</td>
+        <td>{{row.C_info}}</td>  
+        <td>{{row.C_date}}</td>    
+    </tr>
+    {% endfor %}
+</table>

@@ -23,6 +23,7 @@ urlpatterns = [
     path('hello/responsewithhtml', restapiview.responsewithhtml, name='responsewithhtml'),
     path('hello/form/', restapiview.form, name='helloform'),
     path('hello/template/', restapiview.template, name='template'),
-    path('board/listwithmongo', boardview.listwithmongo)
+    path('board/listwithmongo', boardview.listwithmongo),
+    path('board/workwithmongo', boardview.workwithmongo)
     # path('restapi/task/string', restapiview.taskstring, name='restapi_task_string'),
 ]
