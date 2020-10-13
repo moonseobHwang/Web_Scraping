@@ -1,5 +1,21 @@
+
+
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-panel w3-animate-opacity">
+<div class="w3-tag w3-jumbo">N</div>
+<div class="w3-tag w3-jumbo">E</div>
+<div class="w3-tag w3-jumbo">W</div>
+<div class="w3-tag w3-jumbo">S</div>
+</div>
+
 <table class="table table-striped">
-    <tr> <th>title</th> <th>links</th> <th>create_dates</th> </tr>
+    <tr> <th class="w3-container w3-blue">title</th> <th class="w3-container w3-red">links</th> <th class="w3-container w3-yellow">create_dates</th> </tr>
     {% for row in page_obj.0 %}
     <tr> <td>{{row.title}}</td> <td>{{row.link}}</td> <td>{{row.create_date}}</td>  </tr>
     {% endfor %}
