@@ -20,10 +20,10 @@ from board import views as boardview
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', restapiview.home, name='home'),
+    path('board/listwithmongo', boardview.listwithmongo, name='listwithmongo'),
+    path('board/workwithmongo', boardview.workwithmongo, name='workwithmongo'),
     path('hello/responsewithhtml', restapiview.responsewithhtml, name='responsewithhtml'),
     path('hello/form/', restapiview.form, name='helloform'),
     path('hello/template/', restapiview.template, name='template'),
-    path('board/listwithmongo', boardview.listwithmongo),
-    path('board/workwithmongo', boardview.workwithmongo)
     # path('restapi/task/string', restapiview.taskstring, name='restapi_task_string'),
 ]
