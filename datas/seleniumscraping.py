@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 from pymongo import MongoClient
 
 driver = webdriver.Chrome(executable_path='/home/aa6271235/Documents/Develop/learn_selenium/chromedriver')
-db_url='mongodb://13.125.191.54:59927'
+db_url='mongodb://13.125.191.54:53368'
 # driver.get('https://www.work.go.kr/empInfo/empInfoSrch/list/dtlEmpSrchList.do?careerTo=&keywordJobCd=&occupation=133100%2C133101%2C133200%2C134101%2C134102&rot2WorkYn=&templateInfo=&payGbn=&resultCnt=10&keywordJobCont=&cert=&cloDateStdt=&moreCon=more&minPay=&codeDepth2Info=11000&isChkLocCall=&sortFieldInfo=DATE&major=&resrDutyExcYn=&sortField=DATE&staArea=&sortOrderBy=DESC&keyword=&termSearchGbn=all&benefitSrchAndOr=O&disableEmpHopeGbn=&webIsOut=&actServExcYn=&keywordStaAreaNm=&maxPay=&emailApplyYn=&listCookieInfo=DTL&pageCode=&codeDepth1Info=11000&keywordEtcYn=&publDutyExcYn=&keywordJobCdSeqNo=&exJobsCd=&templateDepthNmInfo=&computerPreferential=&regDateStdt=&employGbn=&empTpGbcd=1&region=&resultCntInfo=10&siteClcd=all&cloDateEndt=&sortOrderByInfo=DESC&currntPageNo=1&indArea=&careerTypes=N&searchOn=Y&subEmpHopeYn=&academicGbn=04&foriegn=&templateDepthNoInfo=&mealOfferClcd=&station=&moerButtonYn=&holidayGbn=&enterPriseGbn=all&academicGbnoEdu=&cloTermSearchGbn=all&keywordWantedTitle=&stationNm=&benefitGbn=&keywordFlag=&essCertChk=&isEmptyHeader=&depth2SelCode=&_csrf=5c5ab007-f9f9-4c7c-88fe-f811bf6c31f3&keywordBusiNm=&preferentialGbn=all&rot3WorkYn=&pfMatterPreferential=&regDateEndt=&staAreaLineInfo1=11000&staAreaLineInfo2=1&pageIndex={}&termContractMmcnt=&careerFrom=&laborHrShortYn=#viewSPL')
 MongoClient(db_url)['work'].sampleCollection.drop()
 
@@ -25,7 +25,6 @@ for j in range(1, 10):
         element = driver.find_element_by_xpath(f"//tr[@id='list{i}']//div[@class='cp-info-in']/*")
         element.click()
         
-
         time.sleep(5)
         driver.implicitly_wait(10)
 

@@ -4,7 +4,7 @@ import requests, time, bs4, sqlite3, schedule
 
 url = "https://job.incruit.com/entry/searchjob.asp?schol=50&occ1=120&occ1=150"
 header = {'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36'}
-db_url='mongodb://13.125.191.54:59927'
+db_url='mongodb://13.125.191.54:53368'
 #MongoClient(db_url)['workbs4'].sampleCollection.drop()
 
 res = requests.get(url)
