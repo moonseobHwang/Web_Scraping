@@ -7,7 +7,7 @@
 <br>
 <br>
 홈 화면 <br>
-<img src="./datas/1.png" width="500"><br>
+<img src="./datas/1.png" width="800"><br>
 <br>
 넣어준 데이터 값<br> 
-<img src="./datas/2.png" width="500"><br>
+<img src="./datas/2.png" width="800"><br>
