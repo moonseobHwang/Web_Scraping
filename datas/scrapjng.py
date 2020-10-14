@@ -44,5 +44,4 @@ with MongoClient(db_url) as client:
     
             print(name_data,major_data,id_data,Condi_data,date_data)
 
-
         time.sleep(0.5)

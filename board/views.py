@@ -7,8 +7,8 @@ from pymongo import MongoClient
 def listwithmongo(request):
     data = request.GET.copy()
     with MongoClient('mongodb://172.17.0.1:27017/') as client:
-        mydb = client.mydb
-        result = list(mydb.economic.find({}))
+        workbs4 = client.workbs4
+        result = list(workbs4.sampleCollection.find({}))
         data['page_obj']=result
     return render(request, 'board/listwithmongo.html', context=data)
 

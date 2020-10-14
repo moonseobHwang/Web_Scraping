@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,5 +16,37 @@
     <tr> <th class="w3-container w3-blue">title</th> <th class="w3-container w3-red">links</th> <th class="w3-container w3-yellow">create_dates</th> </tr>
     {% for row in page_obj.0 %}
     <tr> <td>{{row.title}}</td> <td>{{row.link}}</td> <td>{{row.create_date}}</td>  </tr>
+    {% endfor %}
+</table> -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<title>취업사이트</title>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div class="w3-panel w3-animate-opacity">
+<div class="w3-tag w3-jumbo">취</div>
+<div class="w3-tag w3-jumbo">업</div>
+<div class="w3-tag w3-jumbo">정</div>
+<div class="w3-tag w3-jumbo">보</div>
+</div>
+
+<table class="table table-striped">
+    <tr>
+        <th class="w3-container w3-green">회사명</th> 
+        <th class="w3-container w3-blue">제목</th> 
+        <th class="w3-container w3-red">근무조건</th> 
+        <th class="w3-container w3-yellow">지원자격</th>
+        <th class="w3-container w3-green">Date</th> 
+    </tr>
+    {% for row in page_obj.0 %}
+    <tr> 
+        <td>{{row.id_data}}</td> 
+        <td>{{row.name_data}}</td> 
+        <td>{{row.Condi_data}}</td> 
+        <td>{{row.major_data}}</td> 
+        <td>{{row.date_data}}</td>  
+    </tr>
     {% endfor %}
 </table>
