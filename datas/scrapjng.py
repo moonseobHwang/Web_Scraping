@@ -4,7 +4,7 @@ import requests, time, bs4, sqlite3, schedule
 
 url = "https://job.incruit.com/entry/searchjob.asp?schol=50&occ1=120&occ1=150"
 header = {'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36'}
-db_url='mongodb://127.0.0.1:27017'
+db_url='mongodb://13.125.191.54:59927'
 #MongoClient(db_url)['workbs4'].sampleCollection.drop()
 
 res = requests.get(url)
@@ -12,7 +12,8 @@ soup = BeautifulSoup(res.text, "html5lib")
 
 with MongoClient(db_url) as client:
     workbs4 = client['workbs4']
-    for i in range(1, 10):
+    MongoClient(db_url)['workbs4'].sampleCollection.drop()
+    for i in range(1, 30):
         #incruit_contents > div.section_layout > div.n_job_list_default > div.n_job_list_table_a.list_full_default > table > tbody > tr:nth-child(2)
         title_data=soup.tbody
         datas = title_data.select(f"tr:nth-child({i})")
